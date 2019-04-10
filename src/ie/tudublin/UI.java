@@ -32,6 +32,7 @@ public class UI extends PApplet
 	public void setup() 
 	{
 		loadData();
+		printColours();
 	}
 
 	//load in data from file
@@ -43,6 +44,15 @@ public class UI extends PApplet
 		{
 			Colour colour = new Colour(row);
 			Colours.add(colour);
+		}
+	}
+
+	//Display contents of Colours
+	private void printColours()
+	{
+		for(Colour colour: Colours)
+		{
+			System.out.println(colour);
 		}
 	}
 	
