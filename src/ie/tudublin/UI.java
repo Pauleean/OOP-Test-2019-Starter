@@ -88,4 +88,10 @@ public class UI extends PApplet
 			i++;
 		}
 	}
+
+	public void setColour(int val)
+	{
+		Colour colour = findColour(val);
+		fill(colour.R, colour.G, colour.B);
+	}
 }
