@@ -1,3 +1,4 @@
+//Niall Williams, C17511003
 package ie.tudublin;
 
 public class Resistor
