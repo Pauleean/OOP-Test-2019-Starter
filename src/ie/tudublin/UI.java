@@ -51,7 +51,7 @@ public class UI extends PApplet
 
 		for(TableRow row : table.rows())
 		{
-			Resistor resistor = new Resistor(row.getInt("value"));
+			Resistor resistor = new Resistor(row.getInt("value"), this);
 			Resistors.add(resistor);
 		}
 	}
@@ -80,6 +80,12 @@ public class UI extends PApplet
 	}
 	
 	public void draw()
-	{			
+	{
+		int i = 0;
+		for(Resistor resistor: Resistors)
+		{
+			resistor.render(i);
+			i++;
+		}
 	}
 }
