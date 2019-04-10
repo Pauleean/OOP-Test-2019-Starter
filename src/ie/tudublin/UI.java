@@ -9,6 +9,7 @@ import processing.data.TableRow;
 public class UI extends PApplet
 {
 	private ArrayList<Colour> Colours = new ArrayList<Colour>();
+	private ArrayList<Resistor> Resistors = new ArrayList<Resistor>();
 
 	public void separate(int value)
 	{
@@ -44,6 +45,14 @@ public class UI extends PApplet
 		{
 			Colour colour = new Colour(row);
 			Colours.add(colour);
+		}
+
+		table = loadTable("resistors.csv", "header");
+
+		for(TableRow row : table.rows())
+		{
+			Resistor resistor = new Resistor(row.getInt("value"));
+			Resistors.add(resistor);
 		}
 	}
 
