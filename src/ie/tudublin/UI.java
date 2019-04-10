@@ -55,6 +55,20 @@ public class UI extends PApplet
 			System.out.println(colour);
 		}
 	}
+
+	//Find Colour based on value
+	public Colour findColour(int val)
+	{
+		for(int i = 0; i < Colours.size(); i++)
+		{
+			if(Colours.get(i).value == val)
+			{
+				return Colours.get(i);
+			}
+		}
+
+		return null;
+	}
 	
 	public void draw()
 	{			
